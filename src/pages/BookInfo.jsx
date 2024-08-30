@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Book from "../components/ui/Book";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,10 @@ const BookInfo = ({ books, addToCart, cart}) => {
     function addBookToCart(book) {
         addToCart(book)
     }
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
 
   return (
     <div id="books__body">

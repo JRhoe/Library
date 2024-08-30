@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import EmptyCart from "../assets/empty_cart.svg"
 import { Link } from 'react-router-dom';
 
@@ -11,6 +11,10 @@ const Cart = ({ books, cart, changeQuantity, removeItem}) => {
         });
         return price
     }
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+      },[])
 
     return (
         <div id="books__body">
